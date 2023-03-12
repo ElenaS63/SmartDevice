@@ -162,8 +162,8 @@
     padding-left: 11px;
 
     label {
-     display: flex;
-     align-items: center;
+      display: flex;
+      align-items: center;
     }
 
     input {
@@ -267,26 +267,3 @@
     max-width: 100%;
   }
 }
-
-
-// input[type="checkbox"]:hover,
-// input[type="checkbox"]:focus {
-//   outline: none;
-//   border-color: rgba($color-black-pearl, 0.5);
-//   box-shadow: 1px 1px 1px $color-black-pearl;
-// }
-
-// // input[type="checkbox"]:checked {
-// //   &::after {
-// //     content: "";
-// //     position: absolute;
-// //     left: 22%;
-// //     top: 13%;
-// //     width: 5px;
-// //     height: 7px;
-// //     border: solid $color-default-white;
-// //     border-width: 0 1px 1px 0;
-// //     transform: rotate(45deg);
-// //   }
-// // }
-

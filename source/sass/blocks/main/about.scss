@@ -90,9 +90,10 @@
   line-height: 17px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  border: 1px solid $color-deep-sky-blue;
   border-radius: 3px;
   color: $color-deep-sky-blue;
-  border: 1px solid $color-deep-sky-blue;
+
 
   &:hover,
   &:focus {
@@ -127,11 +128,11 @@
   [data-accordion="element-mobile"] {
     padding-bottom: 20px;
 
-    @media (max-width:$tablet-width) {
+    @media (max-width: $tablet-width) {
       padding-bottom: 0;
     }
 
-    @media (max-width:$mobile-width) {
+    @media (max-width: $mobile-width) {
       display: none;
     }
   }
