@@ -1,0 +1,19 @@
+.main__promo-wrapper {
+  width: 100%;
+  background-color: $color-black-pearl;
+}
+
+.main__catalog-wrapper {
+  width: 100%;
+  background-color: $color-black-pearl;
+}
+
+.main__form-wrapper {
+  width: 100%;
+  background-color: $color-deep-sky-blue;
+  background-image: $pearl-to-right;
+
+  @media (max-width: $tablet-width) {
+    background-image: none;
+  }
+}

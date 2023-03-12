@@ -1,0 +1,28 @@
+[data-accordion="element"].is-active > [data-accordion="content"] {
+  max-height: 100%;
+}
+
+[data-accordion="parent"].no-transition [data-accordion="content"] {
+  transition: none;
+}
+
+[data-accordion="content"] {
+  max-height: 0;
+  transition: max-height 0.3s;
+  overflow: hidden;
+}
+
+[data-accordion="element"].is-active > [data-accordion="button"] {
+  &::before {
+    transform: rotate(-180deg);
+  }
+}
+
+//При отключенных скриптах кнопки скрыты, контент открыт.
+[data-accordion="element"].no-js > [data-accordion="content"] {
+  max-height: 100%;
+}
+
+[data-accordion="element"].no-js > [data-accordion="button"] {
+  display: none;
+}

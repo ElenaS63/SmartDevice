@@ -1,0 +1,149 @@
+.promo {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1920px;
+
+  font-family: $ff-pt-mono;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 35px;
+  color: $color-alice-blue;
+
+  @media (max-width: $tablet-width) {
+    min-height: 640px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 560px;
+  }
+}
+
+.promo__description-wrapper {
+  width: 720px;
+  max-height: 400px;
+  overflow-x: auto;
+  position: absolute;
+  top: 34.5%;
+  left: 24.7%;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 32px;
+    font-family: $ff-roboto-condensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $color-alice-blue;
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 45px;
+    font-family: $ff-pt-mono;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 670px;
+    top: 28%;
+    left: 6.5%;
+
+    h2 {
+      font-size: 64px;
+      line-height: 75px;
+      margin-bottom: 2px;
+    }
+
+    h3 {
+      margin-bottom: 54px;
+    }
+
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 270px;
+    top: 27%;
+    left: 8%;
+
+    h2 {
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 7px;
+    }
+
+    h3 {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 46px;
+    }
+  }
+}
+
+.promo__button {
+  margin-left: 1px;
+  padding: 16px 27px 17px;
+  border-radius: 3px;
+  display: inline-block;
+  background-color: $color-deep-sky-blue;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $color-black-pearl;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  p {
+    margin: 0;
+    font-family: $ff-roboto-condensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: $color-alice-blue;
+    text-transform: uppercase;
+  }
+
+  span {
+    display: none;
+    margin: 0;
+    font-family: $ff-roboto-condensed;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: $color-alice-blue;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-left: 45px;
+  }
+
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+    padding: 12px 37px;
+
+    p {
+      display: none;
+    }
+
+    span {
+      display: block;
+    }
+  }
+}

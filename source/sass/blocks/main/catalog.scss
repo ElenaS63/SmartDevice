@@ -1,0 +1,158 @@
+.catalog {
+  padding-top: 65px;
+  padding-bottom: 140px;
+  font-family: $ff-roboto-condensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-default-white;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 54px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  h3 {
+    display: none;
+    margin: 0;
+    margin-bottom: 29px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 55px;
+    padding-bottom: 75px;
+
+    h2 {
+      margin-bottom: 38px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 47px;
+    padding-bottom: 86px;
+
+    h2 {
+      display: none;
+    }
+
+    h3 {
+      display: block;
+    }
+  }
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 85px;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.catalog__item {
+  position: relative;
+}
+
+.catalog__link {
+  display: block;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 8px $color-deep-sky-blue;
+  }
+
+  &:active {
+    box-shadow: 0 0 8px $color-alice-blue;
+  }
+
+  p {
+    max-height: 380px;
+    overflow-x: auto;
+    max-width: 190px;
+    margin: 48px 40px 0;
+    color: $color-default-white;
+    position: absolute;
+    top: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: $tablet-width) {
+    p {
+      max-height: 180px;
+      max-width: 150px;
+      margin: 37px 45px 0 45px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    p {
+      margin: 26px 30px 0;
+      max-width: 130px;
+      font-size: 18px;
+    }
+  }
+}
+
+.catalog__button-link {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: $color-deep-sky-blue;
+  border-radius: 3px 0px 0px 0px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    width: 8px;
+    height: 8px;
+    border: solid $color-default-white;
+    border-width: 0 1px 1px 0;
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $color-default-white;
+
+    &::after {
+      border-color: $color-deep-sky-blue;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 40px;
+    height: 40px;
+
+    &::after {
+      width: 5px;
+      height: 5px;
+    }
+  }
+}

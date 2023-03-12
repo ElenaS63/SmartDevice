@@ -1,0 +1,22 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background: $pearl-to-bottom;
+}
+
+.header__wrapper {
+  padding: 17px 0 26px;
+  max-width: 1220px;
+
+
+  @media (max-width: $tablet-width) {
+    padding-top: 3px;
+    padding-bottom: 21px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
