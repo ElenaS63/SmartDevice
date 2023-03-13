@@ -1,6 +1,6 @@
 .form {
   padding-top: 165px;
-  padding-bottom: 248px;
+  padding-bottom: 250px;
   display: flex;
   font-family: $ff-pt-mono;
   font-style: normal;
@@ -9,13 +9,63 @@
   line-height: 19px;
   color: $color-default-white;
 
+  form {
+    max-width: 580px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 30px;
+
+    @media (max-width: $tablet-width) {
+      width: 100%;
+      max-width: 923px;
+    }
+
+    @media (max-width: $mobile-width) {
+      grid-template-columns: 1fr;
+      min-width: 270px;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-family: $ff-roboto-condensed;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+    grid-column: 1/3;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: -8px;
+    }
+
+    @media (max-width: $mobile-width) {
+      font-size: 30px;
+      line-height: 42px;
+      grid-column: 1/2;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+    line-height: 21px;
+    grid-column: 1/3;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 23px;
+      font-size: 14px;
+      line-height: 18px;
+      grid-column: 1/2;
+    }
+  }
+
   @media (max-width: $tablet-width) {
     padding-top: 45px;
     padding-bottom: 125px;
-
-    form {
-      width: 100%;
-    }
   }
 
   @media (max-width: $mobile-width) {
@@ -30,59 +80,6 @@
 
   @media (max-width: $tablet-width) {
     display: none;
-  }
-}
-
-.form__text-wrapper {
-  h3 {
-    margin: 0;
-    margin-bottom: 15px;
-    font-family: $ff-roboto-condensed;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 51px;
-
-    @media (max-width: $tablet-width) {
-      margin-bottom: 9px;
-    }
-
-    @media (max-width: $mobile-width) {
-      font-size: 30px;
-      line-height: 42px;
-    }
-  }
-
-  p {
-    margin: 0;
-    margin-bottom: 35px;
-    line-height: 21px;
-
-    @media (max-width: $tablet-width) {
-      margin-bottom: 25px;
-    }
-
-    @media (max-width: $mobile-width) {
-      margin-bottom: 34px;
-      font-size: 14px;
-      line-height: 18px;
-    }
-  }
-}
-
-.form__inputs-wrapper {
-  max-width: 580px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px 30px;
-
-  @media (max-width: $tablet-width) {
-    width: 100%;
-    max-width: 923px;
-  }
-
-  @media (max-width: $mobile-width) {
-    grid-template-columns: 1fr;
-    min-width: 270px;
   }
 }
 
@@ -125,15 +122,16 @@
 
   textarea {
     min-height: 155px;
-    padding: 25px 15px;
+    padding: 31px 15px;
 
     @media (max-width: $tablet-width) {
-      padding-top: 33px;
+      min-height: 161px;
+      padding-top: 38px;
     }
 
     @media (max-width: $mobile-width) {
       min-height: 180px;
-      padding-top: 24px;
+      padding-top: 32px;
     }
   }
 
@@ -146,19 +144,19 @@
   }
 
   &--submit {
-    padding-top: 10px;
+    padding-top: 20px;
 
     @media (max-width: $tablet-width) {
-      padding-top: 11px;
+      padding-top: 15px;
     }
 
     @media (max-width: $mobile-width) {
-      padding-top: 4px;
+      padding-top: 17px;
     }
   }
 
   &--checkbox {
-    padding-top: 27px;
+    padding-top: 35px;
     padding-left: 11px;
 
     label {
@@ -220,11 +218,11 @@
 
     @media (max-width: $tablet-width) {
       padding-left: 0;
-      padding-top: 21px;
+      padding-top: 26px;
     }
 
     @media (max-width: $mobile-width) {
-      padding-top: 5px;
+      padding-top: 10px;
       padding-left: 5px;
     }
   }

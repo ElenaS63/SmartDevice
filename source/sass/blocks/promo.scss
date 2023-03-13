@@ -2,6 +2,8 @@
   position: relative;
   margin: 0 auto;
   max-width: 1920px;
+  width: 100%;
+  background-color: $color-black-pearl;
 
   font-family: $ff-pt-mono;
   font-style: normal;
@@ -103,7 +105,7 @@
     opacity: 1;
   }
 
-  p {
+  [data-promo-text] {
     margin: 0;
     font-family: $ff-roboto-condensed;
     font-style: normal;
@@ -113,19 +115,19 @@
     letter-spacing: 0.05em;
     color: $color-alice-blue;
     text-transform: uppercase;
-  }
 
-  span {
-    display: none;
-    margin: 0;
-    font-family: $ff-roboto-condensed;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    color: $color-alice-blue;
-    text-transform: uppercase;
+    &::after {
+      content: "Получить бесплатную консультацию";
+    }
+
+    @media (max-width: $mobile-width) {
+      font-size: 14px;
+      line-height: 16px;
+
+      &::after {
+        content: "Бесплатная консультация";
+      }
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -136,13 +138,5 @@
   @media (max-width: $mobile-width) {
     margin-left: 0;
     padding: 12px 37px;
-
-    p {
-      display: none;
-    }
-
-    span {
-      display: block;
-    }
   }
 }

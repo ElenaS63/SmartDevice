@@ -81,7 +81,6 @@
 
 .about__button {
   display: inline-block;
-  border: none;
   cursor: pointer;
   padding: 13px 50px;
   font-family: $ff-roboto-condensed;
@@ -93,6 +92,7 @@
   border: 1px solid $color-deep-sky-blue;
   border-radius: 3px;
   color: $color-deep-sky-blue;
+  background-color: transparent;
 
 
   &:hover,

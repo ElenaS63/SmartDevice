@@ -1,7 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import './modules/accordion/accordeon-footer';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {changeAboutButton} from './modules/accordion/button-text-change';
 // ---------------------------------

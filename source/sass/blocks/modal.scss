@@ -92,26 +92,10 @@
   cursor: pointer;
 }
 
-.modal__text-wrapper {
-  h3 {
-    margin: 0;
-    margin-bottom: 3px;
-    font-family: $ff-roboto-condensed;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 42px;
-  }
-
-  p {
-    margin: 0;
-    margin-bottom: 39px;
-  }
-}
-
 .modal__content {
   position: relative;
   width: 500px;
-  padding: 40px 40px 44px;
+  padding: 36px 40px 44px;
   background-color: $color-deep-sky-blue-accent;
   border-radius: 3px;
   margin: 0 auto;
@@ -119,6 +103,26 @@
   @include vp-767 {
     width: 100%;
     padding: 20px;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: -15px;
+    font-family: $ff-roboto-condensed;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
@@ -150,12 +154,6 @@
   &::before {
     transform: rotate(-45deg);
   }
-}
-
-.modal__inputs-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
 }
 
 .modal__input {
