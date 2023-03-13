@@ -8,7 +8,7 @@
   line-height: 30px;
   color: $color-default-white;
 
-  [data-catalog-title] {
+  h2 {
     margin: 0;
     margin-bottom: 54px;
     font-weight: 400;
@@ -16,7 +16,7 @@
     line-height: 51px;
 
     &::after {
-      content: "Smart Device предлагает следующие товары и услуги";
+      content: attr(data-catalog-desktop);
     }
 
     @media (max-width: $tablet-width) {
@@ -30,7 +30,7 @@
       line-height: 39px;
 
       &::after {
-        content: "Товары и услуги Smart Device";
+        content: attr(data-catalog-mobile);
       }
     }
   }

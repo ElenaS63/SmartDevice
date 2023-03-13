@@ -73,8 +73,9 @@
           <div class="promo__description-wrapper">
             <h2>Печатные платы</h2>
             <h3>производство и монтаж, поставка комплектующих, блоков&nbsp;и&nbsp;модулей</h3>
-            <a class="promo__button" href="#question-form">
-              <p data-promo-text></p>
+            <a class="promo__button" href="#question-form" data-promo-desktop="Получить бесплатную консультацию"
+              data-promo-mobile="Бесплатная консультация">
+              <p class="visually-hidden">Для получения бесплатной консультации жмите сюда!</p>
             </a>
           </div>
         </section>
@@ -166,8 +167,11 @@
         </div>
       </section>
       <div class="main__catalog-wrapper">
-        <section class="catalog container">
-          <h2 data-catalog-title></h2>
+        <section class="catalog container" >
+          <h2 class="catalog__title" data-catalog-desktop="Smart Device предлагает следующие товары и услуги"
+          data-catalog-mobile="Товары и услуги Smart Device">
+            <span class="visually-hidden">Smart Device предлагает следующие товары и услуги</span>
+          </h2>
           <ul class="catalog__list">
             <li class="catalog__item">
               <a class="catalog__link" href="#">
@@ -253,17 +257,20 @@
             <div class="form__input form__input--name">
               <label for="name" data-validate-type="text" data-required
                 data-message-base="Поле обязательно к заполнению">
+                <span class="visually-hidden">Поле для ввода имени</span>
                 <input type="text" name="name" id="name" placeholder="Имя" required>
               </label>
             </div>
             <div class="form__input form__input--phone">
               <label for="phone" data-validate-type="phone" data-required
                 data-message-base="Поле обязательно к заполнению">
+                <span class="visually-hidden">Поле для ввода телефонного номера</span>
                 <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
               </label>
             </div>
             <div class="form__input form__input--question">
               <label for="question">
+                <span class="visually-hidden">Поле для ввода комментария</span>
                 <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
               </label>
             </div>
@@ -384,34 +391,37 @@
         <form action="https://echo.htmlacademy.ru/" method="post">
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
-            <div class="modal__input modal__input--name">
-              <label for="modal-name" data-validate-type="text" data-required
-                data-message-base="Поле обязательно к заполнению">
-                <input type="text" name="name" id="modal-name" placeholder="Имя" data-focus required>
-              </label>
-            </div>
-            <div class="modal__input modal__input--phone">
-              <label for="modal-phone" data-validate-type="phone" data-required
-                data-message-base="Поле обязательно к заполнению">
-                <input type="tel" name="phone" id="modal-phone" placeholder="Телефон" required>
-              </label>
-            </div>
-            <div class="modal__input modal__input--question">
-              <label for="modal-question">
-                <textarea name="question" id="modal-question" placeholder="Ваш вопрос"></textarea>
-              </label>
-            </div>
-            <div class="modal__input modal__input--submit">
-              <button class="modal__submit-button" type="submit">
-                Отправить
-              </button>
-            </div>
-            <div class="modal__input modal__input--checkbox">
-              <label for="modal-agreement" data-validate-type="checkbox" data-required>
-                <input type="checkbox" name="agreement" id="modal-agreement" checked required>
-                <span>Я согласен на обработку персональных данных</span>
-              </label>
-            </div>
+          <div class="modal__input modal__input--name">
+            <label for="modal-name" data-validate-type="text" data-required
+              data-message-base="Поле обязательно к заполнению">
+              <span class="visually-hidden">Поле для ввода имени</span>
+              <input type="text" name="name" id="modal-name" placeholder="Имя" data-focus required>
+            </label>
+          </div>
+          <div class="modal__input modal__input--phone">
+            <label for="modal-phone" data-validate-type="phone" data-required
+              data-message-base="Поле обязательно к заполнению">
+              <span class="visually-hidden">Поле для ввода телефонного номера</span>
+              <input type="tel" name="phone" id="modal-phone" placeholder="Телефон" required>
+            </label>
+          </div>
+          <div class="modal__input modal__input--question">
+            <label for="modal-question">
+              <span class="visually-hidden">Поле для ввода комментария</span>
+              <textarea name="question" id="modal-question" placeholder="Ваш вопрос"></textarea>
+            </label>
+          </div>
+          <div class="modal__input modal__input--submit">
+            <button class="modal__submit-button" type="submit">
+              Отправить
+            </button>
+          </div>
+          <div class="modal__input modal__input--checkbox">
+            <label for="modal-agreement" data-validate-type="checkbox" data-required>
+              <input type="checkbox" name="agreement" id="modal-agreement" checked required>
+              <span>Я согласен на обработку персональных данных</span>
+            </label>
+          </div>
         </form>
       </div>
     </div>
