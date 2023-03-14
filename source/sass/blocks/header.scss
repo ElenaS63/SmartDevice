@@ -6,8 +6,8 @@
 }
 
 .header__wrapper {
-  padding-top: 26px;
-  padding-bottom: 26px;
+  max-width: 1320px;
+  padding: 26px 50px 35px;
 
   @media (max-width: $tablet-width) {
     padding-top: 3px;

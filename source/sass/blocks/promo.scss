@@ -94,7 +94,8 @@
 }
 
 .promo__button {
-  margin-left: 1px;
+  user-select: none;
+  margin-left: -2px;
   padding: 16px 27px 17px;
   border-radius: 3px;
   display: inline-block;
@@ -112,6 +113,7 @@
   &:hover,
   &:focus {
     outline: none;
+    box-shadow: 0 0 0 2px $color-deep-sky-blue;
     background-color: $color-black-pearl;
     opacity: 0.8;
   }

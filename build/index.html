@@ -50,7 +50,9 @@
               </a>
             </li>
           </ul>
-          <a href="#" class="navigation__button" data-open-modal="modal">Заказать звонок</a>
+          <div class="navigation__button-wrapper">
+            <a href="#" class="navigation__button" data-open-modal="modal">Заказать звонок</a>
+          </div>
         </nav>
       </div>
     </header>
@@ -256,36 +258,38 @@
           <form action="https://echo.htmlacademy.ru/" method="post">
             <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
             <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
-            <div class="form__input form__input--name">
-              <label for="name" data-validate-type="text" data-required
-                data-message-base="Поле обязательно к заполнению">
-                <span class="visually-hidden">Поле для ввода имени</span>
-                <input type="text" name="name" id="name" placeholder="Имя" required>
-              </label>
-            </div>
-            <div class="form__input form__input--phone">
-              <label for="phone" data-validate-type="phone" data-required
-                data-message-base="Поле обязательно к заполнению">
-                <span class="visually-hidden">Поле для ввода телефонного номера</span>
-                <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
-              </label>
-            </div>
-            <div class="form__input form__input--question">
-              <label for="question">
-                <span class="visually-hidden">Поле для ввода комментария</span>
-                <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
-              </label>
-            </div>
-            <div class="form__input form__input--submit">
-              <button class="form__submit-button" type="submit">
-                Задать вопрос
-              </button>
-            </div>
-            <div class="form__input form__input--checkbox">
-              <label for="agreement" data-validate-type="checkbox" data-required>
-                <input type="checkbox" name="agreement" id="agreement" checked required>
-                <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
-              </label>
+            <div class="form__inputs-wrapper">
+              <div class="form__input form__input--name">
+                <label for="name" data-validate-type="text" data-required
+                  data-message-base="Поле обязательно к заполнению">
+                  <span class="visually-hidden">Поле для ввода имени</span>
+                  <input type="text" name="name" id="name" placeholder="Имя" required>
+                </label>
+              </div>
+              <div class="form__input form__input--phone">
+                <label for="phone" data-validate-type="phone" data-required
+                  data-message-base="Поле обязательно к заполнению">
+                  <span class="visually-hidden">Поле для ввода телефонного номера</span>
+                  <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+                </label>
+              </div>
+              <div class="form__input form__input--question">
+                <label for="question">
+                  <span class="visually-hidden">Поле для ввода комментария</span>
+                  <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
+                </label>
+              </div>
+              <div class="form__input form__input--checkbox">
+                <label for="agreement" data-validate-type="checkbox" data-required>
+                  <input type="checkbox" name="agreement" id="agreement" checked required>
+                  <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                </label>
+              </div>
+              <div class="form__input form__input--submit">
+                <button class="form__submit-button" type="submit">
+                  Задать вопрос
+                </button>
+              </div>
             </div>
           </form>
         </section>
@@ -413,17 +417,18 @@
               <textarea name="question" id="modal-question" placeholder="Ваш вопрос"></textarea>
             </label>
           </div>
-          <div class="modal__input modal__input--submit">
-            <button class="modal__submit-button" type="submit">
-              Отправить
-            </button>
-          </div>
           <div class="modal__input modal__input--checkbox">
             <label for="modal-agreement" data-validate-type="checkbox" data-required>
               <input type="checkbox" name="agreement" id="modal-agreement" checked required>
               <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
             </label>
           </div>
+          <div class="modal__input modal__input--submit">
+            <button class="modal__submit-button" type="submit">
+              Отправить
+            </button>
+          </div>
+
         </form>
       </div>
     </div>

@@ -57,9 +57,14 @@
   margin: 0;
 
   @media (max-width: $tablet-width) {
-    max-width: 100%;
+    max-width: 500px;
     padding-left: 0;
     padding-top: 5px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 100%;
+    line-height: 19px;
   }
 }
 
@@ -90,5 +95,9 @@
 
   @media (max-width: $tablet-width) {
     padding-left: 9px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 4px;
   }
 }

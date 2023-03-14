@@ -98,7 +98,9 @@
   padding: 36px 40px 44px;
   background-color: $color-deep-sky-blue-accent;
   border-radius: 3px;
-  margin: 0 auto;
+  transform: translateX(-8px);
+  margin: -45px auto 0;
+
 
   @include vp-767 {
     width: 100%;
@@ -169,6 +171,12 @@
 }
 
 .modal__input {
+  label.is-invalid {
+    span {
+      color: $color-torch-red;
+    }
+  }
+
   input:not([type="checkbox"]),
   textarea {
     width: 100%;
@@ -208,6 +216,7 @@
 
   &--checkbox {
     padding-left: 10px;
+    order: 5;
 
     label {
       display: flex;
@@ -260,6 +269,7 @@
 }
 
 .modal__submit-button {
+  user-select: none;
   width: 100%;
   display: inline-block;
   border: none;
@@ -281,6 +291,7 @@
     outline: none;
     background-color: rgba($color-black-pearl, 0.5);
     opacity: 0.8;
+    box-shadow: 2px 2px 2px $color-black-pearl;
   }
 
   &:active {
