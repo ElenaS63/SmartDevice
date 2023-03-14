@@ -1,8 +1,9 @@
 .promo {
   position: relative;
   margin: 0 auto;
-  max-width: 1920px;
   width: 100%;
+  min-height: 880px;
+  padding-top: 304px;
   background-color: $color-black-pearl;
 
   font-family: $ff-pt-mono;
@@ -12,22 +13,30 @@
   line-height: 35px;
   color: $color-alice-blue;
 
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   @media (max-width: $tablet-width) {
     min-height: 640px;
+    padding-top: 179px;
   }
 
   @media (max-width: $mobile-width) {
+    padding-top: 151px;
     min-height: 560px;
   }
 }
 
 .promo__description-wrapper {
-  width: 720px;
-  max-height: 400px;
-  overflow-x: auto;
-  position: absolute;
-  top: 34.5%;
-  left: 24.7%;
+  position: relative;
+  z-index: 6;
+  padding-left: 235px;
 
   h2 {
     margin: 0;
@@ -53,10 +62,6 @@
   }
 
   @media (max-width: $tablet-width) {
-    width: 670px;
-    top: 28%;
-    left: 6.5%;
-
     h2 {
       font-size: 64px;
       line-height: 75px;
@@ -69,9 +74,9 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 270px;
-    top: 27%;
-    left: 8%;
+    br {
+      display: none;
+    }
 
     h2 {
       font-size: 36px;

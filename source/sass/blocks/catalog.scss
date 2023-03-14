@@ -62,6 +62,7 @@
 
 .catalog__item {
   position: relative;
+  min-height: 650px;
 
   &::before,
   &::after {
@@ -76,6 +77,7 @@
     height: 60px;
     background-color: $color-deep-sky-blue;
     border-top-left-radius: 3px;
+    z-index: 4;
   }
 
   &::after {
@@ -86,6 +88,11 @@
     border: solid $color-default-white;
     border-width: 0 1px 1px 0;
     transform: rotate(-45deg);
+    z-index: 5;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 250px;
   }
 
   @media (max-width: $mobile-width) {
@@ -105,6 +112,8 @@
 
 .catalog__link {
   display: block;
+  height: 100%;
+  padding: 50px 40px;
 
   &:hover,
   &:focus {
@@ -117,30 +126,34 @@
   }
 
   p {
-    max-height: 380px;
-    overflow-x: auto;
-    max-width: 190px;
-    margin: 48px 40px 0;
+    position: relative;
     color: $color-default-white;
-    position: absolute;
-    top: 0;
+    z-index: 3;
+    max-width: 170px;
+    margin: 0;
   }
 
   img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   @media (max-width: $tablet-width) {
+    padding: 38px 45px;
+
     p {
-      max-height: 180px;
       max-width: 150px;
-      margin: 37px 45px 0 45px;
     }
   }
 
   @media (max-width: $mobile-width) {
+    padding: 26px 30px;
+
     p {
-      margin: 26px 30px 0;
       max-width: 130px;
       font-size: 18px;
     }
