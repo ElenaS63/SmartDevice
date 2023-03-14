@@ -1,14 +1,13 @@
 .header {
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
   background: $pearl-to-bottom;
 }
 
 .header__wrapper {
-  padding: 17px 0 26px;
-  max-width: 1220px;
-
+  padding-top: 26px;
+  padding-bottom: 26px;
 
   @media (max-width: $tablet-width) {
     padding-top: 3px;

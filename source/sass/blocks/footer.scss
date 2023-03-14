@@ -4,12 +4,11 @@
 
 .footer__wrapper {
   width: 100%;
-  max-width: 1220px;
   margin: 0 auto;
+  max-width: 1320px;
+  padding: 50px;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 50px;
-  padding-bottom: 50px;
 
   @media (max-width: $tablet-width) {
     padding: 50px 50px 59px;
@@ -21,8 +20,10 @@
 }
 
 .footer__item-wrapper {
-  &:not(:last-child) {
-    margin-right: auto;
+  @media (max-width: $tablet-width) {
+    &:not(:nth-child(n+2)) {
+      margin-right: auto;
+    }
   }
 
   @media (max-width: $mobile-width) {

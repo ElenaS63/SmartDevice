@@ -1,6 +1,8 @@
 .social {
+  width: 17.6%;
   display: flex;
   flex-direction: column;
+  margin-right: 13%;
 
   @media (max-width: $tablet-width) {
     width: 100%;

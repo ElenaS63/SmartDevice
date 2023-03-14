@@ -137,13 +137,14 @@
   background: $color-transparent;
   border: none;
   cursor: pointer;
+  border-radius: 3px;
 
   &::after,
   &::before {
     content: "";
     position: absolute;
     top: 47%;
-    left: 17%;
+    left: 14%;
     display: block;
     width: 28px;
     height: 1px;
@@ -153,6 +154,17 @@
 
   &::before {
     transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: rgba($color-black-pearl, 0.5);
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
   }
 }
 
