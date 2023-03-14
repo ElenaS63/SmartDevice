@@ -1633,8 +1633,9 @@ button,
 .promo {
   position: relative;
   margin: 0 auto;
-  max-width: 1920px;
   width: 100%;
+  min-height: 880px;
+  padding-top: 304px;
   background-color: #041827;
   font-family: "PT Mono", "Times New Roman", serif;
   font-style: normal;
@@ -1644,13 +1645,20 @@ button,
   color: #f2f5f6;
 }
 
-.promo__description-wrapper {
-  width: 720px;
-  max-height: 400px;
-  overflow-x: auto;
+.promo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
   position: absolute;
-  top: 34.5%;
-  left: 24.7%;
+  top: 0;
+  left: 0;
+}
+
+.promo__description-wrapper {
+  position: relative;
+  z-index: 6;
+  padding-left: 235px;
 }
 
 .promo__description-wrapper h2 {
@@ -1918,6 +1926,7 @@ button,
 
 .catalog__item {
   position: relative;
+  min-height: 650px;
 }
 
 .catalog__item::before,
@@ -1933,6 +1942,7 @@ button,
   height: 60px;
   background-color: #00b2ff;
   border-top-left-radius: 3px;
+  z-index: 4;
 }
 
 .catalog__item::after {
@@ -1945,10 +1955,13 @@ button,
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  z-index: 5;
 }
 
 .catalog__link {
   display: block;
+  height: 100%;
+  padding: 50px 40px;
 }
 
 .catalog__link:hover,
@@ -1964,17 +1977,21 @@ button,
 }
 
 .catalog__link p {
-  max-height: 380px;
-  overflow-x: auto;
-  max-width: 190px;
-  margin: 48px 40px 0;
+  position: relative;
   color: #ffffff;
-  position: absolute;
-  top: 0;
+  z-index: 3;
+  max-width: 170px;
+  margin: 0;
 }
 
 .catalog__link img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .form {
@@ -2576,12 +2593,7 @@ button,
 
   .promo {
     min-height: 640px;
-  }
-
-  .promo__description-wrapper {
-    width: 670px;
-    top: 28%;
-    left: 6.5%;
+    padding-top: 179px;
   }
 
   .promo__description-wrapper h2 {
@@ -2676,10 +2688,16 @@ button,
     gap: 30px;
   }
 
+  .catalog__item {
+    min-height: 250px;
+  }
+
+  .catalog__link {
+    padding: 38px 45px;
+  }
+
   .catalog__link p {
-    max-height: 180px;
     max-width: 150px;
-    margin: 37px 45px 0 45px;
   }
 
   .form form {
@@ -2827,13 +2845,12 @@ button,
   }
 
   .promo {
+    padding-top: 151px;
     min-height: 560px;
   }
 
-  .promo__description-wrapper {
-    width: 270px;
-    top: 27%;
-    left: 8%;
+  .promo__description-wrapper br {
+    display: none;
   }
 
   .promo__description-wrapper h2 {
@@ -2965,8 +2982,11 @@ button,
     height: 4px;
   }
 
+  .catalog__link {
+    padding: 26px 30px;
+  }
+
   .catalog__link p {
-    margin: 26px 30px 0;
     max-width: 130px;
     font-size: 18px;
   }
