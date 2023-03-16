@@ -1,6 +1,14 @@
 .main__promo-wrapper {
   width: 100%;
   background-color: $color-black-pearl;
+
+  @media (max-width: $tablet-width) {
+    margin-top: -100px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: -70px;
+  }
 }
 
 .main__catalog-wrapper {

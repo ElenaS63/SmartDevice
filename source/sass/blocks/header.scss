@@ -3,6 +3,10 @@
   width: 100%;
   z-index: 10;
   background: $pearl-to-bottom;
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+  }
 }
 
 .header__wrapper {

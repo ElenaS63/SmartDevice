@@ -58,31 +58,12 @@ export class Form {
     return this._validator.validateFormElement(item);
   }
 
-  _onFormSubmit(event, callback = null) {
-    const result = this.validateForm(event.target);
-
-    if (result === true && callback) {
-      this._callbacks[callback].successCallback(event);
-      if (this._callbacks[callback].reset) {
-        setTimeout(() => {
-          this.reset(event.target);
-        }, this._callbacks[callback].resetTimeout ? this._callbacks[callback].resetTimeout : 500);
-      }
-      return;
-    }
-
-    if (result === false && callback) {
-      this._callbacks[callback].errorCallback(event);
-      return;
-    }
-
-    if (result === true) {
-      event.target.submit();
-    }
-  }
+  // Если не использовать колбэк base (контейнеру формы data-callback="base"), то берем этот код, а ниже удалаяем.
 
   // _onFormSubmit(event, callback = null) {
-  //   if (this.validateForm(event.target) && callback) {
+  //   const result = this.validateForm(event.target);
+
+  //   if (result === true && callback) {
   //     this._callbacks[callback].successCallback(event);
   //     if (this._callbacks[callback].reset) {
   //       setTimeout(() => {
@@ -91,11 +72,32 @@ export class Form {
   //     }
   //     return;
   //   }
-  //   if (!this.validateForm(event.target) && callback) {
+
+  //   if (result === false && callback) {
   //     this._callbacks[callback].errorCallback(event);
   //     return;
   //   }
+
+  //   if (result === true) {
+  //     event.target.submit();
+  //   }
   // }
+
+  _onFormSubmit(event, callback = null) {
+    if (this.validateForm(event.target) && callback) {
+      this._callbacks[callback].successCallback(event);
+      if (this._callbacks[callback].reset) {
+        setTimeout(() => {
+          this.reset(event.target);
+        }, this._callbacks[callback].resetTimeout ? this._callbacks[callback].resetTimeout : 500);
+      }
+      return;
+    }
+    if (!this.validateForm(event.target) && callback) {
+      this._callbacks[callback].errorCallback(event);
+      return;
+    }
+  }
 
   _onFormInput(item) {
     this.validateFormElement(item);

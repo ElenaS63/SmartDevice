@@ -44,6 +44,14 @@
     }
   }
 
+  form {
+    min-width: 500px;
+
+    @media (max-width: $tablet-width) {
+      min-width: 100%;
+    }
+  }
+
   @media (max-width: $tablet-width) {
     padding-top: 45px;
     padding-bottom: 163px;
@@ -70,7 +78,7 @@
   @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
     gap: 5%;
-    grid-template-areas: "name"  "phone" "textarea" "submit" "checkbox";
+    grid-template-areas: "name" "phone" "textarea" "submit" "checkbox";
     min-width: 270px;
   }
 }
@@ -95,6 +103,7 @@
   textarea {
     width: 100%;
     background-color: rgba($color-black-pearl, 0.15);
+    // color: $color-default-white;
     border-radius: 3px;
     border: none;
 
@@ -181,7 +190,7 @@
       appearance: none;
       display: block;
       position: relative;
-      width: 21px;
+      width: 24px;
       height: 15px;
       margin-right: 10px;
       border: 1px solid $color-default-white;
@@ -258,8 +267,13 @@
   color: $color-default-white;
   background-color: $color-black-pearl-accent;
 
-  &:hover,
-  &:focus {
+  &:hover {
+    background-color: rgba($color-black-pearl, 0.5);
+    opacity: 0.8;
+    box-shadow: 2px 2px 2px $color-black-pearl;
+  }
+
+  &:focus-visible {
     outline: none;
     background-color: rgba($color-black-pearl, 0.5);
     opacity: 0.8;
