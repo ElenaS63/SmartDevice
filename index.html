@@ -247,7 +247,7 @@
         </section>
       </div>
       <div class="main__form-wrapper">
-        <section class="form container" id="question-form" data-form-validate>
+        <section class="form container" id="question-form" data-form-validate data-callback="base">
           <div class="form__image-wrapper">
             <picture>
               <source type="image/webp" srcset="./img/paper-airplane@1x.webp 1x, ./img/paper-airplane@2x.webp 2x">
@@ -372,7 +372,7 @@
             <span class="visually-hidden">Развернуть/свернуть контактные данные</span>
           </button>
           <ul class="contacts__list" data-accordion="content">
-            <li class="contacts__item">
+            <li class="contacts__item contacts__item--adress">
               <a class="contacts__link" href="#">г. Мытищи, Олимпийский проспект, д.10</a>
             </li>
             <li class="contacts__item">
@@ -392,7 +392,7 @@
   <div class="modal" data-modal="modal">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content" data-form-validate>
+      <div class="modal__content" data-form-validate data-callback="base">
         <form action="https://echo.htmlacademy.ru/" method="post">
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
