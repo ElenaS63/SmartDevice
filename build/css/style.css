@@ -457,12 +457,6 @@ textarea {
   resize: none;
 }
 
-input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0 1000px #ffffff;
-  box-shadow: inset 0 0 0 1000px #ffffff;
-  -webkit-text-fill-color: #000000;
-}
-
 input,
 textarea {
   border-radius: 0;
@@ -843,7 +837,7 @@ button,
 .modal__input input:not([type=checkbox]),
 .modal__input textarea {
   width: 100%;
-  background-color: rgba(4, 24, 39, 0.15);
+  background-color: #00aae4;
   border-radius: 3px;
   border: none;
 }
@@ -893,6 +887,12 @@ button,
 .modal__input input:not([type=checkbox]):disabled,
 .modal__input textarea:disabled {
   background-color: #c4c4c4;
+}
+
+.modal__input input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 1000px #00aae4;
+  box-shadow: inset 0 0 0 1000px #00aae4;
+  -webkit-text-fill-color: #041827;
 }
 
 .modal__input input:not([type=checkbox]) {
@@ -2131,7 +2131,7 @@ button,
 .form__input input:not([type=checkbox]),
 .form__input textarea {
   width: 100%;
-  background-color: rgba(4, 24, 39, 0.15);
+  background-color: #00aae4;
   border-radius: 3px;
   border: none;
 }
@@ -2175,12 +2175,19 @@ button,
 .form__input input:not([type=checkbox]):focus-within,
 .form__input textarea:active,
 .form__input textarea:focus-within {
+  outline: none;
   color: #ffffff;
 }
 
 .form__input input:not([type=checkbox]):disabled,
 .form__input textarea:disabled {
   background-color: #c4c4c4;
+}
+
+.form__input input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 1000px #00aae4;
+  box-shadow: inset 0 0 0 1000px #00aae4;
+  -webkit-text-fill-color: #041827;
 }
 
 .form__input input:not([type=checkbox]) {
