@@ -2637,8 +2637,6 @@ button,
 .contacts__link:hover {
   opacity: 0.8;
   color: #00b2ff;
-  -webkit-box-shadow: inset 0 0 0 1px #00b2ff;
-  box-shadow: inset 0 0 0 1px #00b2ff;
 }
 
 .contacts__link:focus-visible {
