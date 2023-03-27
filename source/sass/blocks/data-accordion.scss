@@ -9,7 +9,11 @@
 [data-accordion="content"] {
   max-height: 0;
   transition: max-height 0.3s;
-  overflow: hidden;
+
+  //Чтобы не обрезались outline
+  @media (max-width: $mobile-width) {
+    overflow: hidden;
+  }
 }
 
 [data-accordion="element"].is-active > [data-accordion="button"] {

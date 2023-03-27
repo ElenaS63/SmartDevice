@@ -1949,7 +1949,6 @@ button,
   -webkit-transition: max-height 0.3s;
   -o-transition: max-height 0.3s;
   transition: max-height 0.3s;
-  overflow: hidden;
 }
 
 [data-accordion=element].is-active > [data-accordion=button]::before {
@@ -3126,6 +3125,10 @@ button,
 
   .about__content [data-accordion=element-mobile] {
     display: none;
+  }
+
+  [data-accordion=content] {
+    overflow: hidden;
   }
 
   .catalog h2 {
